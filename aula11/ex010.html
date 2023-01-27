@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        div#radar {
+            background: rgb(78, 74, 74);
+            width: 250px;
+            height: 250px;
+            margin-top: 30px;
+            font: normal 100pt Arial;
+            text-align: center;
+        }
+        div#res {
+            background: rgb(206, 199, 199);
+            width: 250px;
+            height: 80px;
+            margin-top: 5px;
+            font: normal 12pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Radar</h1>
+    Velocidade do carro: <input type="number" name="txtV" id="txtV"> km/h
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="radar"></div>
+    <div id="res"></div>
+    <script>
+        function verificar() {
+            var txtV = window.document.querySelector('input#txtV')
+            var v = Number(txtV.value)
+            var txtR = window.document.querySelector('div#radar')
+            var res = window.document.querySelector('div#res')
+            txtR.innerHTML = v
+            if (v > 60) {
+                res.innerHTML = `MULTADO! Voce excedeu a velocidade em ${(((v - 60) / 60) * 100)}%.`
+            } else {
+                res.innerHTML = `NAO multado! Velocidade ${((60 - v) / 60) * 100}% abaixo da permitida.`
+            }
+        }
+    </script>
+</body>
+</html>

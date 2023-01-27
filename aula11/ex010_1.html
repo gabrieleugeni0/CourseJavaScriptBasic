@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADES</title>
+</head>
+<body>
+    <h1>Verificador de Nacionalidade</h1>
+    Pais atual: <input type="text" name="nac" id="nac">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="resposta"></div>
+    <script>
+        function verificar() {
+            var nacio = window.document.querySelector('input#nac')
+            var resp = window.document.querySelector('div#resposta')
+            resp.innerHTML = `Vivendo no(a) ${nacio.value}...</br>`
+            if (nacio.value == 'Brasil' || nacio.value == 'Brazil') {
+                resp.innerHTML += `Nacionalidade: BRASILEIRO`
+            } else {
+                resp.innerHTML += `Nacionalidade: ESTRANGEIRO`
+            }
+        }
+    </script>
+</body>
+</html>

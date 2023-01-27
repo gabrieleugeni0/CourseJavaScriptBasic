@@ -1,0 +1,36 @@
+<!DOCTYPE html> <!-- Inicio da parte HTML 5-->
+<html lang="pt-BR"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style> /* Inicio da parte CSS 3 */
+        body {
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style> <!-- Fim da parte CSS 3-->
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <script> // Inicio da parte JavaScript //
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var p2 = window.document.getElementsByTagName('p')[1]
+        var dID = window.documento.getElementById('msg')
+        // window.document.write(`Conteudo do paragrafo p1: ${p1.innerText}</br>`)
+        // corpo.style.background = 'black'
+        // p1.style.color = 'blue'
+        // window.document.write(`Conteudo do paragrafo p2: ${p2.innerHTML}`)
+        // window.document.getElementById('msg').innerText = 'Ola!'
+        var ds = window.document.querySelector('div#msg')
+        ds.style.color = 'yellow'
+        ds.style.background = 'red'
+    </script> <!-- Fim da parte JavaScript-->
+</body>
+</html> <!-- Fim da parte HTML 5-->

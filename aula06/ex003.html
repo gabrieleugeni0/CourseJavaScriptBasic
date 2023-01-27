@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: rgb(199, 199, 248);
+            color: rgb(226, 25, 176);
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color:rgb(223, 15, 15)
+        }
+    </style>
+</head>
+<body>  
+    <h1>Hello, World!</h1>
+    <p>I'm free from the curse</p>
+    <script>
+        var n1 = Number.parseInt(window.prompt('Digite um numero: ')) // prompt recebe o valor como string; cast para inteiro
+        var n2 = Number.parseFloat(window.prompt('Digite outro numero: ')) // valor como string; cast para float
+        var n3 = Number(window.prompt('Digite outro numero: ')) // valor como string; cast para number (int ou float automatico)
+        // preciso converter n1 e n2 de string para number antes de somar, senao sera feita uma concatenacao das strings
+        var soma = n1 + n2 + n3 // como foi convertido, sera realizada a adicao (ao inves da concatenacao)
+        /*
+            (number + number) adicao
+            (string + string) concatenacao
+            O sinal para adicionar e o mesmo, a linguagem precisa reconhecer os numbers para adicionar
+        */
+        window.alert(`A soma entre ${n1}, ${n2} e ${n3}, vale ${soma}!`) // impressao com template string (crase ` e place holder ${})
+        // conversao de string para numero
+        String(n1)
+        n2.toString()
+        n3.toString()
+        var concat = n1 + n2 + n3
+        // window.alert('A concatenacao vale ' + concat)
+    </script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-# Curso básico de JavaScript do Google
+# ATT pendente Curso básico de JavaScript do Google
 
 Arquivos separados em aula e exercícios
 

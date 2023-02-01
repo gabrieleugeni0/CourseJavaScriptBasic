@@ -4,36 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Contador</title>
+    <title>Contador</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
-        <h1>Vamos contar</h1>
+        <h1>Contador</h1>
     </header>
     
     <section>
         <div>
-            <p>Inicio: 
-                <input type="number" name="inicio" id="inicio">
-            </p>
-            <p>Fim: 
-                <input type="number" name="fim" id="fim">
-            </p>
-            <p>Passo:
-                <input type="number" name="passo" id="passo">
-            </p>
-            <p>
-                <input type="button" value="Contar" onclick="contador()">
-            </p>
+            <p>Inicio: <input type="number" name="txtini" id="txtini"></p>
+            <p>Fim: <input type="number" name="txtfim" id="txtfim"></p>
+            <p>Passo: <input type="number" name="txtpas" id="txtpas"></p>
+            <p><input type="button" value="Contar" onclick="contar()"></p>
         </div>
-        <div>
-            <p id="restxt">
-                Preparando contagem...
-            </p>
-            <p id="res">
-
-            </p>
+        <div id="res">
+            Preparando contagem...
         </div>
     </section>
 
